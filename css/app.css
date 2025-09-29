@@ -65,9 +65,37 @@ h1:focus {
     color: #ffffff;
 }
 
+/* ==========================================================================
+   3. Footer Section
+   ========================================================================== */
+
+.footer-section {
+    background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+    padding: 0.3rem 0;
+    border-top: 1px solid var(--border-color);
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.footer-section p {
+    color: #ffffff;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.footer-section a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.footer-section a:hover {
+    opacity: 0.8;
+}
+
 
 /* ==========================================================================
-   3. Card Styles
+   4. Card Styles
    ========================================================================== */
 
 .card {
@@ -87,7 +115,7 @@ h1:focus {
 
 
 /* ==========================================================================
-   4. Button Styles
+   5. Button Styles
    ========================================================================== */
 
 .btn-primary {
@@ -108,9 +136,14 @@ h1:focus {
     box-shadow: none;
 }
 
+.sessionize {
+    height:20px;
+    margin-top: -5px;
+}
+
 
 /* ==========================================================================
-   5. Other Components
+   6. Other Components
    ========================================================================== */
 
 .map-container iframe {
@@ -124,7 +157,7 @@ h1:focus {
 
 
 /* ==========================================================================
-   6. Responsive Adjustments
+   7. Responsive Adjustments
    ========================================================================== */
 
 @media (max-width: 768px) {
@@ -148,7 +181,7 @@ h1:focus {
 
 
 /* ==========================================================================
-   7. Loading Animation
+   8. Loading Animation
    ========================================================================== */
 
 #app {
@@ -201,4 +234,45 @@ h1:focus {
         stroke-dashoffset: calc(3.14159265 * 0.8 * 8rem * (1 - 0.2));
         transform: rotate(990deg);
     }
+}
+
+/* ==========================================================================
+   9. Speaker Section
+   ========================================================================== */
+
+.speaker-card {
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.speaker-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto 15px;
+    border: 4px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.speaker-card .card-body {
+    padding: 1rem 1.5rem;
+}
+
+.speaker-card .card-title {
+    color: var(--text-color);
+}
+
+.speaker-card .card-text {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.speaker-card .card-subtitle {
+    font-size: 1rem;
 }
