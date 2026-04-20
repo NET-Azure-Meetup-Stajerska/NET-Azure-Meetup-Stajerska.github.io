@@ -1,0 +1,53 @@
+[
+  {
+    "eventId": "42vcc4ib",
+    "slug": "october-2025",
+    "name": ".NET & Azure Meetup \u0160tajerska - October 2025",
+    "description": "We\u0027re a group of developers, tech enthusiasts, and professionals passionate about .NET, Azure, and related technologies. Whether you\u0027re a seasoned expert or just starting your journey, you\u0027re welcome here! This is the first official meetup, taking place on October, 16th in Tehnolo\u0161ki park Ptuj.",
+    "callForPapersUrl": null,
+    "ticketsUrl": null,
+    "eventStartsAt": "2025-10-16T18:30:00+02:00",
+    "eventEndsAt": "2025-10-16T21:00:00+02:00",
+    "location": {
+      "name": "Tehnolo\u0161ki park Ptuj",
+      "address": "Vicava 1, 2250 Ptuj, Slovenia",
+      "mapsUrl": "https://maps.app.goo.gl/hReM2Geakmmkv63Y6",
+      "embeddedMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.464259029094!2d15.86549!3d46.42171899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f66b3e9b9ae3d%3A0xc6d5caa945b1275f!2sVi%C4%8Dava%201%2C%202250%20Ptuj!5e1!3m2!1sen!2ssi!4v1759162943677!5m2!1sen!2ssi",
+      "parkings": [
+        {
+          "name": "Brezpla\u010dno parkiranje pred Zgodovinskim arhivom na Ptuju",
+          "address": null,
+          "mapsUrl": "https://maps.app.goo.gl/CUJcmNGrUzpyGFfBA"
+        }
+      ]
+    },
+    "photos": [
+      "/images/20251016/1.jpg",
+      "/images/20251016/2.jpg",
+      "/images/20251016/3.jpg",
+      "/images/20251016/4.jpg"
+    ]
+  },
+  {
+    "eventId": "zqj5pn80",
+    "slug": "may-2026",
+    "name": ".NET & Azure Meetup \u0160tajerska - May 2026",
+    "description": "We\u0027re a group of developers, tech enthusiasts, and professionals passionate about .NET, Azure, and related technologies. Whether you\u0027re a seasoned expert or just starting your journey, you\u0027re welcome here! This is the second official meetup, taking place on May, 21st in ZRS Bistra Ptuj.",
+    "callForPapersUrl": "https://sessionize.com/net-azure-meetup-stajerska-may-2026/",
+    "ticketsUrl": "https://www.eventbrite.com/e/net-azure-meetup-stajerska-may-2026-tickets-1987846658868",
+    "eventStartsAt": "2026-05-21T18:30:00+02:00",
+    "eventEndsAt": "2026-05-21T20:30:00+02:00",
+    "location": {
+      "name": "Znanstveno-Raziskovalno sredi\u0161\u010de Bistra Ptuj",
+      "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
+      "embeddedMapUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
+      "parkings": [{
+        "name": "Parkirišče pod gradom",
+        "address": null,
+        "mapsUrl": "https://maps.app.goo.gl/i9nfartUbFjqRdnbA"
+      }]
+    },
+    "photos": []
+  }
+]

@@ -1,0 +1,65 @@
+﻿[
+  {
+    "id": 1,
+    "date": "2025-10-16T18:30:00",
+    "location": "Tehnoloski Park Ptuj",
+    "title": ".NET & Azure Meetup: 16. October 2025",
+    "speakers": [
+      {
+        "name": "Nicola Paro",
+        "talk": "Monitor your IoT asset with Azure free services"
+      },
+      {
+        "name": "Žan Pokeržnik",
+        "talk": "Observability in Action: OpenTelemetry for .NET Developers"
+      },
+      {
+        "name": "Tomaž Kaštrun",
+        "talk": "SQL Server 2025 - all new features for better database developer experience"
+      }
+    ],
+    "agenda": [
+      {
+        "time": "18:30 - 18:40",
+        "topic": "Registration & Welcome"
+      },
+      {
+        "time": "18:40 - 18:50",
+        "topic": "Keynote"
+      },
+      {
+        "time": "18:50 - 19:35",
+        "topic": "Observability in Action: OpenTelemetry for .NET Developers",
+        "name": "Žan Pokeržnik"
+      },
+      {
+        "time": "19:35 - 20:20",
+        "topic": "SQL Server 2025 - all new features for better database developer experience",
+        "name": "Tomaž Kaštrun"
+      },
+      {
+        "time": "20:20 - 21:00",
+        "topic": "Monitor your IoT asset with Azure free services",
+        "name": "Nicola Paro"
+      }
+    ],
+    "images": [
+      {
+        "thumbnail": "/images/20251016/1.jpg",
+        "full": "/images/20251016/1.jpg"
+      },
+      {
+        "thumbnail": "/images/20251016/2.jpg",
+        "full": "/images/20251016/2.jpg"
+      },
+      {
+        "thumbnail": "/images/20251016/3.jpg",
+        "full": "/images/20251016/3.jpg"
+      },
+      {
+        "thumbnail": "/images/20251016/4.jpg",
+        "full": "/images/20251016/4.jpg"
+      }
+    ]
+  }
+]
