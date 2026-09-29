@@ -24,8 +24,10 @@
   --radius: 16px;
   color-scheme: light dark;
 }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0e1330;
     --surface: #182042;
     --text: #eaf0ff;
@@ -34,8 +36,21 @@
     --primary: #35b8ea;
     --primary-hover: #66cbf1;
     --accent: #35b8ea;
+    --focus: #66cbf1;
     --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 30%);
   }
+}
+:root[data-theme="dark"] {
+    --bg: #0e1330;
+    --surface: #182042;
+    --text: #eaf0ff;
+    --muted: #9fabcf;
+    --border: #2b3564;
+    --primary: #35b8ea;
+    --primary-hover: #66cbf1;
+    --accent: #35b8ea;
+    --focus: #66cbf1;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 30%);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -261,7 +276,6 @@ h1, h2 { text-transform: uppercase; letter-spacing: .01em; }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
 main:focus { outline: none; }
 :root { --focus: #1868a8; }
-@media (prefers-color-scheme: dark) { :root { --focus: #66cbf1; } }
 a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
 .site-header :focus-visible, .hero :focus-visible, .site-footer :focus-visible, .theme-build :focus-visible, .lightbox :focus-visible { outline-color: #fff; }
 .skip:focus { outline: 3px solid var(--focus); }
@@ -271,14 +285,18 @@ a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid
 .tag, .status { color: var(--primary-hover); }
 .status.is-past { color: var(--muted); }
 .theme-build .status { color: #4db8ff; }
-@media (prefers-color-scheme: dark) { .btn-primary { color: #0e1330; } .btn-primary:hover { color: #0e1330; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary, :root:not([data-theme="light"]) .btn-primary:hover { color: #0e1330; } }
+:root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn-primary:hover { color: #0e1330; }
 .agenda-item h3 { font-size: 1.05rem; margin: 0 0 4px; }
 .agenda-item.is-service h3 { font-weight: 500; color: var(--muted); }
-/* map facade */
-.map-facade { display: grid; place-items: center; gap: 12px; text-align: center; padding: 40px 20px; min-height: 240px; background: var(--bg); border-top: 1px solid var(--border); }
-.map-facade p { margin: 0; max-width: 52ch; color: var(--muted); }
 /* privacy page */
 .prose { max-width: 72ch; margin-bottom: 48px; }
 .prose h2 { font-size: 1.3rem; margin-top: 2rem; }
 .prose li { margin-bottom: .5rem; }
 .lightbox.single .lb-prev, .lightbox.single .lb-next { display: none; }
+
+/* Theme toggle (System / Light / Dark) */
+.theme-toggle { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; background: transparent; color: #fff; border: 1px solid rgb(255 255 255 / 35%); border-radius: 4px; cursor: pointer; }
+.theme-toggle:hover { background: rgb(255 255 255 / 12%); border-color: #fff; }
+.theme-toggle svg { width: 18px; height: 18px; display: none; }
+.theme-toggle[data-target="light"] .i-light, .theme-toggle[data-target="dark"] .i-dark { display: block; }

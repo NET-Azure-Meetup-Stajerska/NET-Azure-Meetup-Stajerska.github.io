@@ -7,7 +7,7 @@ and the generated files are committed.
 ## Adding / updating an event (the common task)
 1. Edit `data/events.json` — add an object (copy an existing one). Fields: `slug` (URL: `/events/<slug>/`), `name`,
    `sessionizeId` (from the Sessionize API URL, or `null`), `startsAt`/`endsAt` (ISO with `+01:00`/`+02:00` offset),
-   `description`, `ticketsUrl`, `callForPapersUrl` (or `null`), `location` (omit and set `"online": true` for online events; name, address, mapsUrl, embedUrl, parkings[]),
+   `description`, `ticketsUrl`, `callForPapersUrl` (or `null`), `location` (omit and set `"online": true` for online events; name, address, lat, lon, mapsUrl, parkings[] — the OpenStreetMap embed is built from lat/lon),
    `banner` (optional share image, `/images/banners/<slug>.png`), `photos` (array of `/images/<YYYYMMDD>/<file>.jpg`).
 2. Photos go in `images/<YYYYMMDD>/`. Prefer ~1600px wide JPEGs (<500 KB each).
 3. Run `node tools/build.mjs` (also refreshes the Sessionize snapshot in `data/sessionize/`).
@@ -32,6 +32,7 @@ Use text only for third-party brands — no logos.
 
 ## Accessibility, SEO, privacy (keep these true when editing)
 - **Photos need alt text.** In `photos`, use `{ "src": "/images/...jpg", "alt": "what the photo shows" }` (plain strings still work but get a generic alt). Describe people/actions/slides, don't repeat the event name.
-- No cookies, no analytics, no third-party requests before the visitor acts (Google Maps loads on click). A strict Content-Security-Policy in `tools/build.mjs` enforces this — if you add a new external service, it must be added there *and* disclosed on the privacy page (`/privacy/`, in `tools/build.mjs`). That is why there is no cookie banner; adding any tracker/analytics/cookie changes that.
+- Privacy: the site sets no cookies and has no analytics, so there is no cookie banner. Third parties: GitHub (hosting), Sessionize (speaker data), OpenStreetMap (venue map embed, cookie-free). A strict Content-Security-Policy in `tools/build.mjs` limits what can load: if you add a new external service, add it there *and* on the privacy page — and re-check whether it sets cookies (that would bring back the consent-banner question). Do not switch to a Google Maps embed.
+- Theme: header button toggles light/dark; with no saved choice the site follows the OS setting (choice in localStorage; `assets/js/theme.js` applies it before paint).
 - Text colors were checked with axe-core (WCAG 2.2 AA, light + dark): keep contrast when changing the palette.
 - Every page gets canonical URL, Open Graph/Twitter tags, JSON-LD (Organization/WebSite, Event, BreadcrumbList), sitemap entry; the 404 is `noindex`. Descriptions are auto-trimmed to ~158 chars.

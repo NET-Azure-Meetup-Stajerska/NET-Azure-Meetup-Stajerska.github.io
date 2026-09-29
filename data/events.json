@@ -11,8 +11,9 @@
     "location": {
       "name": "Tehnološki park Ptuj",
       "address": "Vicava 1, 2250 Ptuj, Slovenia",
+      "lat": 46.421719,
+      "lon": 15.86549,
       "mapsUrl": "https://maps.app.goo.gl/hReM2Geakmmkv63Y6",
-      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.464259029094!2d15.86549!3d46.42171899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f66b3e9b9ae3d%3A0xc6d5caa945b1275f!2sVi%C4%8Dava%201%2C%202250%20Ptuj!5e1!3m2!1sen!2ssi!4v1759162943677!5m2!1sen!2ssi",
       "parkings": [
         {
           "name": "Brezplačno parkiranje pred Zgodovinskim arhivom na Ptuju",
@@ -52,8 +53,9 @@
     "location": {
       "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
       "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "lat": 46.4202139,
+      "lon": 15.8701306,
       "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
-      "embedUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
       "parkings": [
         {
           "name": "Parkirišče pod gradom",
@@ -76,8 +78,9 @@
     "location": {
       "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
       "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "lat": 46.4202139,
+      "lon": 15.8701306,
       "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
-      "embedUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
       "parkings": [
         {
           "name": "Parkirišče pod gradom",
@@ -113,8 +116,9 @@
     "location": {
       "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
       "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "lat": 46.4202139,
+      "lon": 15.8701306,
       "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
-      "embedUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
       "parkings": [
         {
           "name": "Parkirišče pod gradom",

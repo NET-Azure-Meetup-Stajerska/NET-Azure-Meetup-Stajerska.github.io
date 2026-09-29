@@ -110,7 +110,7 @@ function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAtt
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://cdn.sessionize.com data:; connect-src https://sessionize.com; frame-src https://www.google.com; script-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://cdn.sessionize.com data:; connect-src https://sessionize.com; frame-src https://www.openstreetmap.org; script-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="${abs(path)}">
 <meta property="og:type" content="website">
@@ -129,6 +129,7 @@ function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAtt
 <meta name="theme-color" content="#0f1226">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/icon-192.png">
+<script src="/assets/js/theme.js"></script>
 <link rel="stylesheet" href="/assets/css/site.css">
 ${[jsonLd].flat().filter(Boolean).map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
@@ -140,6 +141,10 @@ ${[jsonLd].flat().filter(Boolean).map((j) => `<script type="application/ld+json"
     <nav aria-label="Main">
       ${nav.map(([h, t]) => `<a href="${h}"${path.startsWith(h) ? ' aria-current="page"' : ''}>${t}</a>`).join('\n      ')}
       ${cfp ? `<a href="${esc(cfp.callForPapersUrl)}" target="_blank" rel="noopener noreferrer" data-hide-when-past="${cfp.endsAt}">Call for speakers</a>` : ''}
+      <button type="button" id="theme-toggle" class="theme-toggle" data-target="dark" aria-label="Switch to dark theme" hidden>
+        <svg class="i-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
       <a class="nav-cta" href="${esc(site.discord)}" target="_blank" rel="noopener noreferrer">${discordIcon}Join us</a>
     </nav>
   </div>
@@ -165,6 +170,11 @@ ${body}
 }
 
 // ---------- components ----------
+// OpenStreetMap embed: no cookies, unlike Google Maps. Marker at the venue, small bounding box around it.
+const osmEmbed = ({ lat, lon }) =>
+  `https://www.openstreetmap.org/export/embed.html?bbox=${lon - 0.004},${lat - 0.0018},${lon + 0.004},${lat + 0.0018}&layer=mapnik&marker=${lat},${lon}`;
+const osmLink = ({ lat, lon }) => `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=17/${lat}/${lon}`;
+
 // Online events set "online": true and need no "location".
 const placeName = (ev) => (ev.online ? 'Online' : ev.location.name);
 const placeIcon = (ev) => (ev.online ? icons.globe : icons.pin);
@@ -364,10 +374,7 @@ ${ev.online ? '' : `<section class="block" id="venue">
         .map((p) => `<p><a href="${esc(p.mapsUrl)}" target="_blank" rel="noopener noreferrer">${icons.car}${esc(p.name)}</a></p>`)
         .join('\n      ')}
     </div>
-    <div class="map-facade" data-map-src="${esc(loc.embedUrl)}" data-map-title="Map of ${esc(loc.name)}">
-      <p>The interactive map is provided by Google. It loads only when you ask for it, so Google doesn't receive your visit otherwise.</p>
-      <button type="button" class="btn btn-primary">${icons.pin}Load interactive map</button>
-    </div>
+    <iframe class="map" src="${esc(osmEmbed(loc))}" title="Map of ${esc(loc.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>`}
 ${ev.photos?.length ? `\n<section class="block" id="photos">\n  <h2>Photos</h2>\n  ${gallery(ev)}\n</section>` : ''}
@@ -386,17 +393,18 @@ out.set(
     jsonLd: breadcrumbs([['Home', '/'], ['Privacy', '/privacy/']]),
     body: `<div class="container page-head"><h1>Privacy</h1></div>
 <div class="container prose">
-<p><strong>Short version:</strong> this website sets no cookies, has no analytics, no advertising and no forms, and doesn't track you.</p>
+<p><strong>Short version:</strong> this website sets no cookies and has no analytics, advertising or forms. The only third parties involved are GitHub (hosting), Sessionize (speaker data) and OpenStreetMap (the venue map).</p>
 <h2>What this site does</h2>
 <ul>
 <li><strong>Hosting.</strong> The site is hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. As with any web host, GitHub receives technical data such as your IP address when your browser requests a page; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>.</li>
 <li><strong>Speakers and agenda.</strong> On event pages, your browser fetches up-to-date speaker and agenda data (and speaker photos) from <a href="https://sessionize.com/" target="_blank" rel="noopener noreferrer">Sessionize</a>, so Sessionize sees your IP address, as with any embedded content.</li>
-<li><strong>Maps.</strong> The interactive Google map on event pages is loaded only after you press "Load interactive map". Until then nothing is sent to Google. Once loaded, Google's own policies apply and Google may set cookies.</li>
+<li><strong>Maps.</strong> Event pages with a venue embed a map from <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>. It sets no cookies, but loading it sends your IP address and browser details to OpenStreetMap's servers; see the <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OpenStreetMap Foundation privacy policy</a>. The address link opens Google Maps only if you click it.</li>
+<li><strong>Theme choice.</strong> If you pick light or dark with the theme button, your choice is saved in your browser's local storage so it is remembered. It never leaves your device.</li>
 <li><strong>Fonts, icons and styles</strong> are served from this site; nothing is loaded from font or script CDNs.</li>
 <li><strong>Links to other sites</strong> (Discord, LinkedIn, Eventbrite, Sessionize, Microsoft) leave this site; their own policies apply.</li>
 </ul>
 <h2>Cookies</h2>
-<p>This site does not set cookies or store anything in your browser, so there is no cookie banner to accept.</p>
+<p>This site does not set cookies, and the embedded map does not either. There is nothing to accept, so there is no cookie banner.</p>
 <h2>Questions</h2>
 <p>Ask the organizers in our <a href="${esc(site.discord)}" target="_blank" rel="noopener noreferrer">Discord community</a> or <a href="${esc(site.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn group</a>.</p>
 <p class="muted">Last updated: 29 September 2026.</p>

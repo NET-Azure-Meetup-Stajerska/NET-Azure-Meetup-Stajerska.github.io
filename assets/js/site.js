@@ -88,24 +88,38 @@ function lightbox() {
   });
 }
 
-// 5. Click-to-load map: nothing is requested from Google until the visitor asks for it.
-function maps() {
-  for (const box of document.querySelectorAll('.map-facade')) {
-    box.querySelector('button').addEventListener('click', () => {
-      const frame = document.createElement('iframe');
-      frame.className = 'map';
-      frame.src = box.dataset.mapSrc;
-      frame.title = box.dataset.mapTitle;
-      frame.allowFullscreen = true;
-      frame.referrerPolicy = 'no-referrer-when-downgrade';
-      box.replaceWith(frame);
-      frame.focus();
-    });
-  }
+// 5. Light/dark toggle. With no saved choice the site follows the OS setting; clicking flips to the
+//    opposite of what is currently shown. Flipping back to what the OS wants clears the override again.
+function themeToggle() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  const osDark = window.matchMedia('(prefers-color-scheme: dark)');
+  const root = document.documentElement;
+  const effective = () => root.getAttribute('data-theme') ?? (osDark.matches ? 'dark' : 'light');
+  const render = () => {
+    const target = effective() === 'dark' ? 'light' : 'dark';
+    btn.dataset.target = target; // the icon shows where a click takes you
+    btn.setAttribute('aria-label', `Switch to ${target} theme`);
+    btn.title = `Switch to ${target} theme`;
+  };
+  btn.hidden = false;
+  render();
+  osDark.addEventListener('change', render);
+  btn.addEventListener('click', () => {
+    const next = effective() === 'dark' ? 'light' : 'dark';
+    const followsSystem = next === (osDark.matches ? 'dark' : 'light');
+    try {
+      if (followsSystem) localStorage.removeItem('theme');
+      else localStorage.setItem('theme', next);
+    } catch {}
+    if (followsSystem) root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', next);
+    render();
+  });
 }
 
 reclassify();
-maps();
+themeToggle();
 hideStale();
 lightbox();
 refreshSessionize();
