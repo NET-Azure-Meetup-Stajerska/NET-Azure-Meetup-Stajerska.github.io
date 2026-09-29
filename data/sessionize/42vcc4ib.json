@@ -1,0 +1,402 @@
+{
+ "all": {
+  "sessions": [
+   {
+    "id": "1036518",
+    "title": "Observability in Action: OpenTelemetry for .NET Developers",
+    "description": "In this talk, we’ll explore how OpenTelemetry provides a vendor-neutral way to achieve observability in .NET. We’ll cover the key concepts, explain the differences between pull and push metrics, and look at the various metric types (counters, gauges, histograms). I’ll also share practical lessons from a real-world project, where enriching metrics with contextual attributes like pod names made the difference between raw numbers and actionable insights.",
+    "startsAt": "2025-10-16T18:50:00",
+    "endsAt": "2025-10-16T19:30:00",
+    "isServiceSession": false,
+    "isPlenumSession": false,
+    "speakers": [
+     "bc680ef4-f84b-433e-8986-35dd390a4138"
+    ],
+    "categoryItems": [],
+    "questionAnswers": [],
+    "roomId": 72214,
+    "liveUrl": null,
+    "recordingUrl": null,
+    "status": "Accepted",
+    "isInformed": true,
+    "isConfirmed": false
+   },
+   {
+    "id": "1043979",
+    "title": "SQL Server 2025 - all new features for better database developer experience",
+    "description": "\r\nThis session will explore the world of SQL Server 2025 and how the landscape is changing with powerful new features designed to boost productivity and flexibility. We will cover:\r\n\t•\tVector search with AI models\r\n\t•\tNative JSON support and indexing\r\n\t•\tAdvanced T-SQL enhancements, including regular expressions and other new T-SQL functionalities\r\n\t•\tBuilt-in REST API support for exposing database functionality through REST APIs\r\n\t•\tCross-platform development on Windows, Linux, containers, Kubernetes, or Azure SQL VM\r\n\t•\tMicrosoft Fabric mirroring\r\nWe will also look at how SQL Server 2025 changes the landscape for connectivity and application development — including updates to SQL Server Management Studio (SSMS) and Copilot integration.",
+    "startsAt": "2025-10-16T19:35:00",
+    "endsAt": "2025-10-16T20:15:00",
+    "isServiceSession": false,
+    "isPlenumSession": false,
+    "speakers": [
+     "04a77511-bb63-4b2a-9d0b-fc6a1a633191"
+    ],
+    "categoryItems": [],
+    "questionAnswers": [],
+    "roomId": 72214,
+    "liveUrl": null,
+    "recordingUrl": null,
+    "status": "Accepted",
+    "isInformed": true,
+    "isConfirmed": false
+   },
+   {
+    "id": "1033409",
+    "title": "Monitor your IoT asset with Azure free services",
+    "description": "My IoT device works, but not really that well: sometimes it jams, and other times is stops working completely. If I had a monitoring system, it would certainly be much better! Fortunately, Azure provides us with many free services: will we be able to use them to build our monitoring infrastructure?",
+    "startsAt": "2025-10-16T20:20:00",
+    "endsAt": "2025-10-16T21:00:00",
+    "isServiceSession": false,
+    "isPlenumSession": false,
+    "speakers": [
+     "ed158120-fe8f-4fd9-9bcb-87a6472d2538"
+    ],
+    "categoryItems": [],
+    "questionAnswers": [],
+    "roomId": 72214,
+    "liveUrl": null,
+    "recordingUrl": null,
+    "status": "Accepted",
+    "isInformed": true,
+    "isConfirmed": false
+   }
+  ],
+  "speakers": [
+   {
+    "id": "ed158120-fe8f-4fd9-9bcb-87a6472d2538",
+    "firstName": "Nicola",
+    "lastName": "Paro",
+    "bio": "Nicola Paro is a Cloud Solutions Architect in beanTech with over 10 years of experience in the industry, with a special focus on the Industrial IoT environment. He is passionate about software development, primarily using .NET, Blazor, and AI technologies.",
+    "tagLine": "Cloud Solution Architect - beanTech S.r.L.",
+    "profilePicture": "https://cdn.sessionize.com/image/cd94-400o400o1-svA5yki1CizFvJ5MZ73xSR.png",
+    "isTopSpeaker": false,
+    "links": [],
+    "sessions": [
+     1033409
+    ],
+    "fullName": "Nicola Paro",
+    "categoryItems": [],
+    "questionAnswers": []
+   },
+   {
+    "id": "04a77511-bb63-4b2a-9d0b-fc6a1a633191",
+    "firstName": "Tomaž",
+    "lastName": "Kaštrun",
+    "bio": "Tomaž Kaštrun is a SQL Server developer and data scientist with more than 15 years of experience in the fields of business warehousing, development, ETL, database administration, and query tuning. He holds over 15 years of experience in data analysis, data mining, statistical research, and machine learning. He is a Microsoft SQL Server MVP for data platform and has been working with Microsoft SQL Server since version 2000. He is a blogger, author of many articles, a frequent speaker at the community and Microsoft events. He is an avid coffee drinker who is passionate about fixed gear bikes. In 2018 he co-authored book \"SQL Server 2017 Machine Learning Services with R\".",
+    "tagLine": "SQL Server developer and data scientist",
+    "profilePicture": "https://cdn.sessionize.com/image/91ce-400o400o1-11-bb63-4b2a-9d0b-fc6a1a633191.27a89be4-f000-49a5-99de-45683c3e8289.png",
+    "isTopSpeaker": false,
+    "links": [],
+    "sessions": [
+     1043979
+    ],
+    "fullName": "Tomaž Kaštrun",
+    "categoryItems": [],
+    "questionAnswers": []
+   },
+   {
+    "id": "bc680ef4-f84b-433e-8986-35dd390a4138",
+    "firstName": "Žan",
+    "lastName": "Pokeržnik",
+    "bio": "Zan is a full-stack .NET developer with over 10 years of experience building scalable and maintainable applications. He has served as a tech lead and loves sharing his knowledge with others. Outside of work, he enjoys traveling, spending time with his family and his dog, bringing the same curiosity and care to life as he does to code.",
+    "tagLine": "Full-stack .NET developer with a decade of experience, sharing real-world lessons from the trenches.",
+    "profilePicture": "https://cdn.sessionize.com/image/4892-400o400o1-puoYbP2DYkzt4rigy8rWtX.jpg",
+    "isTopSpeaker": false,
+    "links": [],
+    "sessions": [
+     1036518
+    ],
+    "fullName": "Žan Pokeržnik",
+    "categoryItems": [],
+    "questionAnswers": []
+   }
+  ],
+  "questions": [],
+  "categories": [],
+  "rooms": [
+   {
+    "id": 72214,
+    "name": "Room 1",
+    "sort": 0
+   }
+  ]
+ },
+ "grid": [
+  {
+   "date": "2025-10-16T00:00:00",
+   "isDefault": false,
+   "rooms": [
+    {
+     "id": 72214,
+     "name": "Room 1",
+     "sessions": [
+      {
+       "id": "862cc719-b4d5-4a89-83f6-ddba3c46760c",
+       "title": "Registration & Welcome",
+       "description": null,
+       "startsAt": "2025-10-16T18:30:00",
+       "endsAt": "2025-10-16T18:40:00",
+       "isServiceSession": true,
+       "isPlenumSession": false,
+       "speakers": [],
+       "categories": [],
+       "roomId": 72214,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": null,
+       "isInformed": false,
+       "isConfirmed": false
+      },
+      {
+       "id": "de1e9c22-d5a5-4bc9-8b10-e3521883a1bb",
+       "title": "Keynote",
+       "description": null,
+       "startsAt": "2025-10-16T18:40:00",
+       "endsAt": "2025-10-16T18:50:00",
+       "isServiceSession": true,
+       "isPlenumSession": false,
+       "speakers": [],
+       "categories": [],
+       "roomId": 72214,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": null,
+       "isInformed": false,
+       "isConfirmed": false
+      },
+      {
+       "id": "1036518",
+       "title": "Observability in Action: OpenTelemetry for .NET Developers",
+       "description": "In this talk, we’ll explore how OpenTelemetry provides a vendor-neutral way to achieve observability in .NET. We’ll cover the key concepts, explain the differences between pull and push metrics, and look at the various metric types (counters, gauges, histograms). I’ll also share practical lessons from a real-world project, where enriching metrics with contextual attributes like pod names made the difference between raw numbers and actionable insights.",
+       "startsAt": "2025-10-16T18:50:00",
+       "endsAt": "2025-10-16T19:30:00",
+       "isServiceSession": false,
+       "isPlenumSession": false,
+       "speakers": [
+        {
+         "id": "bc680ef4-f84b-433e-8986-35dd390a4138",
+         "name": "Žan Pokeržnik"
+        }
+       ],
+       "categories": [],
+       "roomId": 72214,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": "Accepted",
+       "isInformed": true,
+       "isConfirmed": false
+      },
+      {
+       "id": "1043979",
+       "title": "SQL Server 2025 - all new features for better database developer experience",
+       "description": "\r\nThis session will explore the world of SQL Server 2025 and how the landscape is changing with powerful new features designed to boost productivity and flexibility. We will cover:\r\n\t•\tVector search with AI models\r\n\t•\tNative JSON support and indexing\r\n\t•\tAdvanced T-SQL enhancements, including regular expressions and other new T-SQL functionalities\r\n\t•\tBuilt-in REST API support for exposing database functionality through REST APIs\r\n\t•\tCross-platform development on Windows, Linux, containers, Kubernetes, or Azure SQL VM\r\n\t•\tMicrosoft Fabric mirroring\r\nWe will also look at how SQL Server 2025 changes the landscape for connectivity and application development — including updates to SQL Server Management Studio (SSMS) and Copilot integration.",
+       "startsAt": "2025-10-16T19:35:00",
+       "endsAt": "2025-10-16T20:15:00",
+       "isServiceSession": false,
+       "isPlenumSession": false,
+       "speakers": [
+        {
+         "id": "04a77511-bb63-4b2a-9d0b-fc6a1a633191",
+         "name": "Tomaž Kaštrun"
+        }
+       ],
+       "categories": [],
+       "roomId": 72214,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": "Accepted",
+       "isInformed": true,
+       "isConfirmed": false
+      },
+      {
+       "id": "1033409",
+       "title": "Monitor your IoT asset with Azure free services",
+       "description": "My IoT device works, but not really that well: sometimes it jams, and other times is stops working completely. If I had a monitoring system, it would certainly be much better! Fortunately, Azure provides us with many free services: will we be able to use them to build our monitoring infrastructure?",
+       "startsAt": "2025-10-16T20:20:00",
+       "endsAt": "2025-10-16T21:00:00",
+       "isServiceSession": false,
+       "isPlenumSession": false,
+       "speakers": [
+        {
+         "id": "ed158120-fe8f-4fd9-9bcb-87a6472d2538",
+         "name": "Nicola Paro"
+        }
+       ],
+       "categories": [],
+       "roomId": 72214,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": "Accepted",
+       "isInformed": true,
+       "isConfirmed": false
+      }
+     ],
+     "hasOnlyPlenumSessions": false
+    }
+   ],
+   "timeSlots": [
+    {
+     "slotStart": "18:30:00",
+     "rooms": [
+      {
+       "id": 72214,
+       "name": "Room 1",
+       "session": {
+        "id": "862cc719-b4d5-4a89-83f6-ddba3c46760c",
+        "title": "Registration & Welcome",
+        "description": null,
+        "startsAt": "2025-10-16T18:30:00",
+        "endsAt": "2025-10-16T18:40:00",
+        "isServiceSession": true,
+        "isPlenumSession": false,
+        "speakers": [],
+        "categories": [],
+        "roomId": 72214,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": null,
+        "isInformed": false,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    },
+    {
+     "slotStart": "18:40:00",
+     "rooms": [
+      {
+       "id": 72214,
+       "name": "Room 1",
+       "session": {
+        "id": "de1e9c22-d5a5-4bc9-8b10-e3521883a1bb",
+        "title": "Keynote",
+        "description": null,
+        "startsAt": "2025-10-16T18:40:00",
+        "endsAt": "2025-10-16T18:50:00",
+        "isServiceSession": true,
+        "isPlenumSession": false,
+        "speakers": [],
+        "categories": [],
+        "roomId": 72214,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": null,
+        "isInformed": false,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    },
+    {
+     "slotStart": "18:50:00",
+     "rooms": [
+      {
+       "id": 72214,
+       "name": "Room 1",
+       "session": {
+        "id": "1036518",
+        "title": "Observability in Action: OpenTelemetry for .NET Developers",
+        "description": "In this talk, we’ll explore how OpenTelemetry provides a vendor-neutral way to achieve observability in .NET. We’ll cover the key concepts, explain the differences between pull and push metrics, and look at the various metric types (counters, gauges, histograms). I’ll also share practical lessons from a real-world project, where enriching metrics with contextual attributes like pod names made the difference between raw numbers and actionable insights.",
+        "startsAt": "2025-10-16T18:50:00",
+        "endsAt": "2025-10-16T19:30:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+         {
+          "id": "bc680ef4-f84b-433e-8986-35dd390a4138",
+          "name": "Žan Pokeržnik"
+         }
+        ],
+        "categories": [],
+        "roomId": 72214,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    },
+    {
+     "slotStart": "19:35:00",
+     "rooms": [
+      {
+       "id": 72214,
+       "name": "Room 1",
+       "session": {
+        "id": "1043979",
+        "title": "SQL Server 2025 - all new features for better database developer experience",
+        "description": "\r\nThis session will explore the world of SQL Server 2025 and how the landscape is changing with powerful new features designed to boost productivity and flexibility. We will cover:\r\n\t•\tVector search with AI models\r\n\t•\tNative JSON support and indexing\r\n\t•\tAdvanced T-SQL enhancements, including regular expressions and other new T-SQL functionalities\r\n\t•\tBuilt-in REST API support for exposing database functionality through REST APIs\r\n\t•\tCross-platform development on Windows, Linux, containers, Kubernetes, or Azure SQL VM\r\n\t•\tMicrosoft Fabric mirroring\r\nWe will also look at how SQL Server 2025 changes the landscape for connectivity and application development — including updates to SQL Server Management Studio (SSMS) and Copilot integration.",
+        "startsAt": "2025-10-16T19:35:00",
+        "endsAt": "2025-10-16T20:15:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+         {
+          "id": "04a77511-bb63-4b2a-9d0b-fc6a1a633191",
+          "name": "Tomaž Kaštrun"
+         }
+        ],
+        "categories": [],
+        "roomId": 72214,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    },
+    {
+     "slotStart": "20:20:00",
+     "rooms": [
+      {
+       "id": 72214,
+       "name": "Room 1",
+       "session": {
+        "id": "1033409",
+        "title": "Monitor your IoT asset with Azure free services",
+        "description": "My IoT device works, but not really that well: sometimes it jams, and other times is stops working completely. If I had a monitoring system, it would certainly be much better! Fortunately, Azure provides us with many free services: will we be able to use them to build our monitoring infrastructure?",
+        "startsAt": "2025-10-16T20:20:00",
+        "endsAt": "2025-10-16T21:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+         {
+          "id": "ed158120-fe8f-4fd9-9bcb-87a6472d2538",
+          "name": "Nicola Paro"
+         }
+        ],
+        "categories": [],
+        "roomId": 72214,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

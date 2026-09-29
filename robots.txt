@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://net-azure-meetup-stajerska.github.io/sitemap.xml

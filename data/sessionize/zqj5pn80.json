@@ -1,0 +1,379 @@
+{
+ "all": {
+  "sessions": [
+   {
+    "id": "177c8771-86e5-4842-9e4b-815c60d76288",
+    "title": "Keynote",
+    "description": null,
+    "startsAt": "2026-05-21T18:30:00",
+    "endsAt": "2026-05-21T18:45:00",
+    "isServiceSession": true,
+    "isPlenumSession": false,
+    "speakers": [],
+    "categoryItems": [],
+    "questionAnswers": [],
+    "roomId": 83856,
+    "liveUrl": null,
+    "recordingUrl": null,
+    "status": null,
+    "isInformed": false,
+    "isConfirmed": false
+   },
+   {
+    "id": "1214004",
+    "title": "Blazor Under the Hood: Components, Binding, and Re-rendering",
+    "description": "In this session we'll look at how Blazor actually works: what a component is, how parameters flow between parent and child, how two-way binding works, and when and why components re-render.",
+    "startsAt": "2026-05-21T18:45:00",
+    "endsAt": "2026-05-21T19:30:00",
+    "isServiceSession": false,
+    "isPlenumSession": false,
+    "speakers": [
+     "69769bff-9a22-4f80-a16b-6e09ffe02d8f"
+    ],
+    "categoryItems": [
+     470707
+    ],
+    "questionAnswers": [],
+    "roomId": 83856,
+    "liveUrl": null,
+    "recordingUrl": null,
+    "status": "Accepted",
+    "isInformed": true,
+    "isConfirmed": false
+   },
+   {
+    "id": "1231596",
+    "title": "One UI to rule them all: Blazor Hybrid",
+    "description": "Companies that have invested in .NET solutions for years are now facing a crucial challenge: how to evolve WinForms or WPF applications toward modern, cross-platform experiences without rewriting everything from scratch.\r\nWith .NET MAUI and Blazor Hybrid, it is possible to adopt a gradual modernization approach, combining the reuse of business logic and C# components with new interfaces and cross-platform features.\r\nDuring this session, we will analyze architectures, patterns, and strategies for integrating Blazor Hybrid into existing applications, evaluating the advantages, limitations, and real-world use cases of a unified .NET ecosystem for web, desktop, and mobile.",
+    "startsAt": "2026-05-21T19:30:00",
+    "endsAt": "2026-05-21T20:15:00",
+    "isServiceSession": false,
+    "isPlenumSession": false,
+    "speakers": [
+     "ed158120-fe8f-4fd9-9bcb-87a6472d2538"
+    ],
+    "categoryItems": [
+     470707
+    ],
+    "questionAnswers": [],
+    "roomId": 83856,
+    "liveUrl": null,
+    "recordingUrl": null,
+    "status": "Accepted",
+    "isInformed": true,
+    "isConfirmed": false
+   }
+  ],
+  "speakers": [
+   {
+    "id": "ed158120-fe8f-4fd9-9bcb-87a6472d2538",
+    "firstName": "Nicola",
+    "lastName": "Paro",
+    "bio": "Nicola Paro is a Solution Architect with over 10 years of experience in the industry, with a special focus on the Industrial IoT environment. He is passionate about software development, primarily using .NET, Blazor, and AI technologies.",
+    "tagLine": "Senior Software Engineer | Solution Architect | Microsoft MVP",
+    "profilePicture": "https://cdn.sessionize.com/image/cd94-400o400o1-svA5yki1CizFvJ5MZ73xSR.png",
+    "isTopSpeaker": false,
+    "links": [
+     {
+      "title": "X (Twitter)",
+      "url": "https://x.com/nicola_paro",
+      "linkType": "Twitter"
+     },
+     {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/nicolaparo/",
+      "linkType": "LinkedIn"
+     },
+     {
+      "title": "GitHub",
+      "url": "https://github.com/nicolaparo",
+      "linkType": "Other"
+     },
+     {
+      "title": "nicolaparo.bsky.social",
+      "url": "https://nicolaparo.bsky.social/",
+      "linkType": "Other"
+     },
+     {
+      "title": "Sessionize",
+      "url": "https://sessionize.com/nicolaparo",
+      "linkType": "Sessionize"
+     }
+    ],
+    "sessions": [
+     1231596
+    ],
+    "fullName": "Nicola Paro",
+    "categoryItems": [],
+    "questionAnswers": []
+   },
+   {
+    "id": "69769bff-9a22-4f80-a16b-6e09ffe02d8f",
+    "firstName": "Žan",
+    "lastName": "Ivanuša",
+    "bio": "Full-stack .NET developer with 2+ years of experience building business applications in .Net and Blazor. Based in Ormož.",
+    "tagLine": "Fullstack .NET Developer",
+    "profilePicture": "https://cdn.sessionize.com/image/d619-400o400o1-aR6RC1kCUtMz3st8UJB5pQ.jpg",
+    "isTopSpeaker": false,
+    "links": [],
+    "sessions": [
+     1214004
+    ],
+    "fullName": "Žan Ivanuša",
+    "categoryItems": [],
+    "questionAnswers": []
+   }
+  ],
+  "questions": [],
+  "categories": [
+   {
+    "id": 130155,
+    "title": "Language",
+    "items": [
+     {
+      "id": 470707,
+      "name": "English",
+      "sort": 1
+     },
+     {
+      "id": 470708,
+      "name": "Slovenian",
+      "sort": 2
+     }
+    ],
+    "sort": 5,
+    "type": "session"
+   }
+  ],
+  "rooms": [
+   {
+    "id": 83856,
+    "name": "Room 1",
+    "sort": 0
+   }
+  ]
+ },
+ "grid": [
+  {
+   "date": "2026-05-21T00:00:00",
+   "isDefault": false,
+   "rooms": [
+    {
+     "id": 83856,
+     "name": "Room 1",
+     "sessions": [
+      {
+       "id": "177c8771-86e5-4842-9e4b-815c60d76288",
+       "title": "Keynote",
+       "description": null,
+       "startsAt": "2026-05-21T18:30:00",
+       "endsAt": "2026-05-21T18:45:00",
+       "isServiceSession": true,
+       "isPlenumSession": false,
+       "speakers": [],
+       "categories": [],
+       "roomId": 83856,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": null,
+       "isInformed": false,
+       "isConfirmed": false
+      },
+      {
+       "id": "1214004",
+       "title": "Blazor Under the Hood: Components, Binding, and Re-rendering",
+       "description": "In this session we'll look at how Blazor actually works: what a component is, how parameters flow between parent and child, how two-way binding works, and when and why components re-render.",
+       "startsAt": "2026-05-21T18:45:00",
+       "endsAt": "2026-05-21T19:30:00",
+       "isServiceSession": false,
+       "isPlenumSession": false,
+       "speakers": [
+        {
+         "id": "69769bff-9a22-4f80-a16b-6e09ffe02d8f",
+         "name": "Žan Ivanuša"
+        }
+       ],
+       "categories": [
+        {
+         "id": 130155,
+         "name": "Language",
+         "categoryItems": [
+          {
+           "id": 470707,
+           "name": "English"
+          }
+         ],
+         "sort": 5
+        }
+       ],
+       "roomId": 83856,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": "Accepted",
+       "isInformed": true,
+       "isConfirmed": false
+      },
+      {
+       "id": "1231596",
+       "title": "One UI to rule them all: Blazor Hybrid",
+       "description": "Companies that have invested in .NET solutions for years are now facing a crucial challenge: how to evolve WinForms or WPF applications toward modern, cross-platform experiences without rewriting everything from scratch.\r\nWith .NET MAUI and Blazor Hybrid, it is possible to adopt a gradual modernization approach, combining the reuse of business logic and C# components with new interfaces and cross-platform features.\r\nDuring this session, we will analyze architectures, patterns, and strategies for integrating Blazor Hybrid into existing applications, evaluating the advantages, limitations, and real-world use cases of a unified .NET ecosystem for web, desktop, and mobile.",
+       "startsAt": "2026-05-21T19:30:00",
+       "endsAt": "2026-05-21T20:15:00",
+       "isServiceSession": false,
+       "isPlenumSession": false,
+       "speakers": [
+        {
+         "id": "ed158120-fe8f-4fd9-9bcb-87a6472d2538",
+         "name": "Nicola Paro"
+        }
+       ],
+       "categories": [
+        {
+         "id": 130155,
+         "name": "Language",
+         "categoryItems": [
+          {
+           "id": 470707,
+           "name": "English"
+          }
+         ],
+         "sort": 5
+        }
+       ],
+       "roomId": 83856,
+       "room": "Room 1",
+       "liveUrl": null,
+       "recordingUrl": null,
+       "status": "Accepted",
+       "isInformed": true,
+       "isConfirmed": false
+      }
+     ],
+     "hasOnlyPlenumSessions": false
+    }
+   ],
+   "timeSlots": [
+    {
+     "slotStart": "18:30:00",
+     "rooms": [
+      {
+       "id": 83856,
+       "name": "Room 1",
+       "session": {
+        "id": "177c8771-86e5-4842-9e4b-815c60d76288",
+        "title": "Keynote",
+        "description": null,
+        "startsAt": "2026-05-21T18:30:00",
+        "endsAt": "2026-05-21T18:45:00",
+        "isServiceSession": true,
+        "isPlenumSession": false,
+        "speakers": [],
+        "categories": [],
+        "roomId": 83856,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": null,
+        "isInformed": false,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    },
+    {
+     "slotStart": "18:45:00",
+     "rooms": [
+      {
+       "id": 83856,
+       "name": "Room 1",
+       "session": {
+        "id": "1214004",
+        "title": "Blazor Under the Hood: Components, Binding, and Re-rendering",
+        "description": "In this session we'll look at how Blazor actually works: what a component is, how parameters flow between parent and child, how two-way binding works, and when and why components re-render.",
+        "startsAt": "2026-05-21T18:45:00",
+        "endsAt": "2026-05-21T19:30:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+         {
+          "id": "69769bff-9a22-4f80-a16b-6e09ffe02d8f",
+          "name": "Žan Ivanuša"
+         }
+        ],
+        "categories": [
+         {
+          "id": 130155,
+          "name": "Language",
+          "categoryItems": [
+           {
+            "id": 470707,
+            "name": "English"
+           }
+          ],
+          "sort": 5
+         }
+        ],
+        "roomId": 83856,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    },
+    {
+     "slotStart": "19:30:00",
+     "rooms": [
+      {
+       "id": 83856,
+       "name": "Room 1",
+       "session": {
+        "id": "1231596",
+        "title": "One UI to rule them all: Blazor Hybrid",
+        "description": "Companies that have invested in .NET solutions for years are now facing a crucial challenge: how to evolve WinForms or WPF applications toward modern, cross-platform experiences without rewriting everything from scratch.\r\nWith .NET MAUI and Blazor Hybrid, it is possible to adopt a gradual modernization approach, combining the reuse of business logic and C# components with new interfaces and cross-platform features.\r\nDuring this session, we will analyze architectures, patterns, and strategies for integrating Blazor Hybrid into existing applications, evaluating the advantages, limitations, and real-world use cases of a unified .NET ecosystem for web, desktop, and mobile.",
+        "startsAt": "2026-05-21T19:30:00",
+        "endsAt": "2026-05-21T20:15:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+         {
+          "id": "ed158120-fe8f-4fd9-9bcb-87a6472d2538",
+          "name": "Nicola Paro"
+         }
+        ],
+        "categories": [
+         {
+          "id": 130155,
+          "name": "Language",
+          "categoryItems": [
+           {
+            "id": 470707,
+            "name": "English"
+           }
+          ],
+          "sort": 5
+         }
+        ],
+        "roomId": 83856,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+       },
+       "index": 0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

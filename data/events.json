@@ -1,0 +1,169 @@
+[
+  {
+    "slug": "october-2025",
+    "name": ".NET & Azure Meetup Štajerska - October 2025",
+    "sessionizeId": "42vcc4ib",
+    "startsAt": "2025-10-16T18:30:00+02:00",
+    "endsAt": "2025-10-16T21:00:00+02:00",
+    "description": "The first official meetup of our community, hosted at Tehnološki park Ptuj. An evening of talks on observability, SQL Server 2025 and Azure IoT.",
+    "callForPapersUrl": null,
+    "ticketsUrl": null,
+    "location": {
+      "name": "Tehnološki park Ptuj",
+      "address": "Vicava 1, 2250 Ptuj, Slovenia",
+      "mapsUrl": "https://maps.app.goo.gl/hReM2Geakmmkv63Y6",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.464259029094!2d15.86549!3d46.42171899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f66b3e9b9ae3d%3A0xc6d5caa945b1275f!2sVi%C4%8Dava%201%2C%202250%20Ptuj!5e1!3m2!1sen!2ssi!4v1759162943677!5m2!1sen!2ssi",
+      "parkings": [
+        {
+          "name": "Brezplačno parkiranje pred Zgodovinskim arhivom na Ptuju",
+          "mapsUrl": "https://maps.app.goo.gl/CUJcmNGrUzpyGFfBA"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "src": "/images/20251016/1.jpg",
+        "alt": "A speaker presenting in front of a projector screen showing the .NET & Azure Meetup Štajerska title slide, in a modern lounge at Tehnološki park Ptuj"
+      },
+      {
+        "src": "/images/20251016/2.jpg",
+        "alt": "A speaker beside his laptop at a lectern, presenting a slide titled 'What is observability?'"
+      },
+      {
+        "src": "/images/20251016/3.jpg",
+        "alt": "A speaker at a lectern with a laptop, in front of a slide reading 'SQL Server 2025 and what is new!'"
+      },
+      {
+        "src": "/images/20251016/4.jpg",
+        "alt": "A speaker presenting a slide titled 'Monitor your IoT Asset with Azure Free Services'"
+      }
+    ],
+    "banner": "/images/banners/october-2025.jpg"
+  },
+  {
+    "slug": "may-2026",
+    "name": ".NET & Azure Meetup Štajerska - May 2026",
+    "sessionizeId": "zqj5pn80",
+    "startsAt": "2026-05-21T18:30:00+02:00",
+    "endsAt": "2026-05-21T20:30:00+02:00",
+    "description": "The second official meetup of our community, hosted at ZRS Bistra Ptuj.",
+    "callForPapersUrl": "https://sessionize.com/net-azure-meetup-stajerska-may-2026/",
+    "ticketsUrl": "https://www.eventbrite.com/e/net-azure-meetup-stajerska-may-2026-tickets-1987846658868",
+    "location": {
+      "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
+      "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
+      "embedUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
+      "parkings": [
+        {
+          "name": "Parkirišče pod gradom",
+          "mapsUrl": "https://maps.app.goo.gl/i9nfartUbFjqRdnbA"
+        }
+      ]
+    },
+    "photos": [],
+    "banner": "/images/banners/may-2026.png"
+  },
+  {
+    "slug": "october-2026",
+    "name": ".NET & Azure Meetup Štajerska - October 2026",
+    "sessionizeId": "2qlj9gt5",
+    "startsAt": "2026-10-15T18:30:00+02:00",
+    "endsAt": "2026-10-15T20:30:00+02:00",
+    "description": "The third official meetup of our community, hosted at ZRS Bistra Ptuj. Whether you're a seasoned expert or just starting your journey, you're welcome here!",
+    "callForPapersUrl": "https://sessionize.com/net-azure-meetup-stajerska-october-2026",
+    "ticketsUrl": "https://www.eventbrite.it/e/net-azure-meetup-stajerska-october-2026-tickets-2000287445596?aff=oddtdtcreator",
+    "location": {
+      "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
+      "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
+      "embedUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
+      "parkings": [
+        {
+          "name": "Parkirišče pod gradom",
+          "mapsUrl": "https://maps.app.goo.gl/i9nfartUbFjqRdnbA"
+        }
+      ]
+    },
+    "photos": [],
+    "banner": "/images/banners/october-2026.png"
+  },
+  {
+    "slug": "build-localhost-ptuj-2026",
+    "name": "Microsoft Build //localhost:ptuj",
+    "sessionizeId": null,
+    "organizer": {
+      "name": "Microsoft Reactor",
+      "url": "https://developer.microsoft.com/en-us/reactor/",
+      "logo": "microsoft"
+    },
+    "externalUrl": "https://developer.microsoft.com/en-us/reactor/events/27198/",
+    "startsAt": "2026-06-23T18:30:00+02:00",
+    "endsAt": "2026-06-23T20:30:00+02:00",
+    "description": "An in-person event for developers and cloud engineers who want to design, build, and deploy real-world AI solutions on Azure: key takeaways from Microsoft Build 2026, live demos with Microsoft Foundry and GitHub Copilot, hands-on labs, and networking with the local AI developer community. Part of the Microsoft Build //localhost:EMEA series.",
+    "callForPapersUrl": null,
+    "ticketsUrl": null,
+    "speakers": [
+      {
+        "name": "Nicola Paro",
+        "tagLine": "Senior Software Engineer | Solution Architect | Microsoft MVP",
+        "photo": "https://cdn.sessionize.com/image/cd94-400o400o1-svA5yki1CizFvJ5MZ73xSR.png"
+      }
+    ],
+    "location": {
+      "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
+      "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
+      "embedUrl": "https://www.google.com/maps?q=46.4202139,15.8701306&output=embed",
+      "parkings": [
+        {
+          "name": "Parkirišče pod gradom",
+          "mapsUrl": "https://maps.app.goo.gl/i9nfartUbFjqRdnbA"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "src": "/images/20260623/1.jpg",
+        "alt": "Attendees seated at tables with laptops in a bright room, watching a presentation on a large screen"
+      },
+      {
+        "src": "/images/20260623/2.jpg",
+        "alt": "A speaker presenting a slide 'Create an agent in 5 minutes' on a large screen to an attentive seated audience"
+      }
+    ],
+    "theme": "build",
+    "heroImage": "/images/build-localhost/landscape.png",
+    "banner": "/images/build-localhost/landscape.png",
+    "hashtag": "#buildlocalhost",
+    "about": {
+      "title": "About Build //localhost",
+      "text": "Microsoft Build //localhost is a global series of community-led, hands-on, in-person learning events designed to extend Microsoft Build content into local technical communities. Hosted between June 4–26, 2026, each event includes demos, hands-on labs, and opportunities to connect with fellow developers."
+    }
+  },
+  {
+    "slug": "dotnet-conf-watchparty-2025",
+    "name": ".NET Conf 2025 Watchparty Štajerska",
+    "sessionizeId": null,
+    "online": true,
+    "startsAt": "2025-11-11T16:45:00+01:00",
+    "endsAt": "2025-11-11T18:30:00+01:00",
+    "description": "Join us for the .NET Conf watch party of Štajerska, and let's discuss together the new features of the latest .NET release!",
+    "callForPapersUrl": null,
+    "ticketsUrl": "https://www.eventbrite.it/e/net-conf-2025-watchparty-stajerska-tickets-1951412510349?aff=oddtdtcreator",
+    "photos": []
+  },
+  {
+    "slug": "january-2026",
+    "name": ".NET & Azure Meetup Štajerska - January 2026",
+    "sessionizeId": null,
+    "online": true,
+    "startsAt": "2026-01-29T18:30:00+01:00",
+    "endsAt": "2026-01-29T20:00:00+01:00",
+    "description": "An online edition of our meetup with a focused look at Dependency Injection in .NET: how much do we really know it?",
+    "callForPapersUrl": null,
+    "ticketsUrl": "https://www.eventbrite.it/e/net-azure-meetup-stajerska-january-2026-tickets-1981535916267?aff=oddtdtcreator",
+    "banner": "/images/banners/january-2026.png",
+    "photos": []
+  }
+]
