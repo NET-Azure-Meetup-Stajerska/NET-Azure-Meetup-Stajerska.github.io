@@ -85,6 +85,11 @@
       "linkType": "LinkedIn"
      },
      {
+      "title": "Blog",
+      "url": "https://nicolaparo.github.io/",
+      "linkType": "Blog"
+     },
+     {
       "title": "GitHub",
       "url": "https://github.com/nicolaparo",
       "linkType": "Other"

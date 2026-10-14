@@ -169,5 +169,41 @@
     "ticketsUrl": "https://www.eventbrite.it/e/net-azure-meetup-stajerska-january-2026-tickets-1981535916267?aff=oddtdtcreator",
     "banner": "/images/banners/january-2026.png",
     "photos": []
+  },
+  {
+    "slug": "dotnet-conf-watchparty-2026",
+    "name": ".NET Conf 2026 Watchparty Štajerska",
+    "sessionizeId": null,
+    "online": true,
+    "startsAt": "2026-11-10T16:45:00+01:00",
+    "endsAt": "2026-11-10T18:30:00+01:00",
+    "description": "Join us for the .NET Conf watch party of Štajerska, and let's discuss together the new features of the latest .NET release and the new C# features!",
+    "callForPapersUrl": null,
+    "ticketsUrl": "https://www.eventbrite.it/e/net-conf-2026-watchparty-stajerska-tickets-2003418389333?aff=oddtdtcreator",
+    "photos": []
+  },
+  {
+    "slug": "december-2026",
+    "name": ".NET & Azure Meetup Štajerska - December 2026",
+    "sessionizeId": null,
+    "startsAt": "2026-12-03T18:30:00+01:00",
+    "endsAt": "2026-12-03T20:30:00+01:00",
+    "description": "The fourth official meetup of our community, hosted at ZRS Bistra Ptuj. A meetup for developers at all levels, covering .NET, Azure and AI.",
+    "callForPapersUrl": "https://sessionize.com/net-azure-meetup-stajerska-december-2026/",
+    "ticketsUrl": "https://www.eventbrite.it/e/net-azure-meetup-stajerska-december-2026-tickets-2003417868776?aff=oddtdtcreator",
+    "location": {
+      "name": "Znanstveno-Raziskovalno središče Bistra Ptuj",
+      "address": "6 Slovenski trg, 2250 Ptuj, Slovenia",
+      "lat": 46.4202139,
+      "lon": 15.8701306,
+      "mapsUrl": "https://maps.google.com/?q=46.4202139,15.8701306",
+      "parkings": [
+        {
+          "name": "Parkirišče pod gradom",
+          "mapsUrl": "https://maps.app.goo.gl/i9nfartUbFjqRdnbA"
+        }
+      ]
+    },
+    "photos": []
   }
 ]
