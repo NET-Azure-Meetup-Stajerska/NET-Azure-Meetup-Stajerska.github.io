@@ -29,7 +29,7 @@ const HOSTS = [
 ];
 const GLOBE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.500 3 14.500 0 18M12 3c-3 3.500-3 14.500 0 18"/></svg>';
 
-function socialLink(l) {
+export function socialLink(l) {
   const url = safeUrl(l.url);
   if (!url) return '';
   let host = '';

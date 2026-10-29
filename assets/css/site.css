@@ -300,3 +300,32 @@ a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid
 .theme-toggle:hover { background: rgb(255 255 255 / 12%); border-color: #fff; }
 .theme-toggle svg { width: 18px; height: 18px; display: none; }
 .theme-toggle[data-target="light"] .i-light, .theme-toggle[data-target="dark"] .i-dark { display: block; }
+
+/* Community */
+.person-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-align: center; box-shadow: var(--shadow); }
+.person-card h3 { font-size: 1.1rem; margin: 12px 0 4px; }
+.person-card h3 a { color: inherit; text-decoration: none; }
+.person-card h3 a:hover { color: var(--primary); }
+.person-card p { margin: 0 0 8px; }
+.person-card .speaker-photo { display: block; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+.person-card .tags { justify-content: center; }
+.tags .tag { margin-left: 0; }
+.person { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }
+.person h1 { font-size: 2.2rem; }
+.person-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--border); }
+.link-list { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 640px) { .person { grid-template-columns: 1fr; } .person-photo { width: 140px; height: 140px; } }
+.person-links { justify-content: flex-start; margin-top: 20px; }
+
+/* Stickers */
+.sticker-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; }
+.sticker { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; text-decoration: none; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 16px; box-shadow: var(--shadow); transition: transform .15s, border-color .15s; }
+.sticker:hover { transform: translateY(-3px) rotate(-1deg); border-color: var(--primary); color: var(--text); }
+.sticker img { width: 160px; height: 160px; object-fit: contain; }
+.sticker-name { font-family: var(--display); font-weight: 700; font-size: 1.1rem; margin-top: 8px; }
+.sticker-event { font-size: .85rem; }
+.sticker-feature { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+.sticker-feature img { width: 200px; height: 200px; object-fit: contain; }
+.sticker-feature h3 { font-size: 1.4rem; }
+@media (prefers-reduced-motion: reduce) { .sticker { transition: none; } .sticker:hover { transform: none; } }

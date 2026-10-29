@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "nicola-paro",
+    "name": "Nicola Paro",
+    "photo": "/images/community/nicola-paro.jpg",
+    "bio": [
+      "Nicola Paro is a Solution Architect with over 10 years of experience in the industry, with a special focus on the Industrial IoT environment. He is passionate about software development, primarily using .NET, Blazor, and AI technologies."
+    ],
+    "topics": [
+      "AI",
+      ".NET",
+      "Azure",
+      "Blazor",
+      "C#"
+    ],
+    "links": [
+      "https://nicolaparo.github.io/",
+      "https://www.linkedin.com/in/nicolaparo/",
+      "https://github.com/nicolaparo"
+    ]
+  },
+  {
+    "slug": "amadej-glasencnik",
+    "name": "Amadej Glasenčnik",
+    "photo": "/images/community/amadej-glasencnik.jpg",
+    "bio": [
+      "Software developer, MSc student of Computer Science & IT"
+    ],
+    "topics": [
+      ".NET",
+      "Azure",
+      "DevOps",
+      "AI"
+    ],
+    "links": [
+      "https://aglasencnik.com",
+      "https://www.linkedin.com/in/aglasencnik",
+      "https://github.com/aglasencnik"
+    ]
+  },
+  {
+    "slug": "ratko-cosic",
+    "name": "Ratko Ćosić",
+    "photo": "/images/community/ratko-cosic.jpg",
+    "bio": [
+      "Ratko Ćosić is a seasoned application architect and tech lead with over 25 years of experience in building Microsoft‑based business systems. He works with C#/.NET, cloud‑native architectures, and Blazor/SPAs, delivering solutions across multiple industries. As a CTO, he leads distributed cloud, IoT, and AI projects, mentors engineering teams, and speaks at numerous regional and international conferences."
+    ],
+    "topics": [
+      ".NET",
+      "Azure",
+      "DevOps",
+      "AI",
+      "Software architecture",
+      "IoT",
+      "Gaming"
+    ],
+    "links": [
+      "https://nobeard.hr",
+      "https://www.linkedin.com/company/nobeard",
+      "https://github.com/NoBeard-Code"
+    ]
+  },
+  {
+    "slug": "zan-pokerznik",
+    "name": "Žan Pokeržnik",
+    "photo": "/images/community/zan-pokerznik.jpg",
+    "bio": [
+      "I’m a software engineer based in Slovenia with a strong background in .NET and C#, backend development, data-intensive systems, and system integrations. I enjoy solving complex technical problems and turning ideas into practical, production-ready software.",
+      "My experience includes large-scale data migrations, enterprise systems, and building reliable backend solutions. Alongside my engineering career, I run OrganizeIT, developing custom software and products such as MojeVabilo and OrganizeIT Checkout, focused on event digitalization, ticket sales, and payment workflows.",
+      "My technical interests include software architecture, backend engineering, database design, automation, and developer productivity. While .NET and C# have been a major part of my journey, I also enjoy exploring other technologies and am currently expanding my experience with Java and Quarkus."
+    ],
+    "topics": [
+      ".NET",
+      "Azure"
+    ],
+    "links": [
+      "https://www.linkedin.com/in/zan-pokerznik/",
+      "https://mojevabilo.si",
+      "https://organize-it.si"
+    ]
+  }
+]

@@ -118,7 +118,20 @@ function themeToggle() {
   });
 }
 
+// Community cards appear in a different random order on every visit (static HTML keeps the file order without JS).
+function shuffleCommunity() {
+  for (const grid of document.querySelectorAll('[data-shuffle]')) {
+    const items = [...grid.children];
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    grid.append(...items);
+  }
+}
+
 reclassify();
+shuffleCommunity();
 themeToggle();
 hideStale();
 lightbox();

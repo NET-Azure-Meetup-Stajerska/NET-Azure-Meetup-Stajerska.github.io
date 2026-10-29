@@ -7,12 +7,13 @@ import { existsSync, createReadStream, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, extname } from 'node:path';
-import { esc, renderSpeakers, renderAgenda, BRAND } from '../assets/js/sessionize.mjs';
+import { esc, renderSpeakers, renderAgenda, socialLink, BRAND } from '../assets/js/sessionize.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = async (p) => JSON.parse((await readFile(join(ROOT, p), 'utf8')).replace(/^\uFEFF/, ''));
 
 const site = await readJson('data/site.json');
+const people = await readJson('data/community.json');
 const events = (await readJson('data/events.json')).sort((a, b) => new Date(a.startsAt) - new Date(b.startsAt));
 
 // ---------- helpers ----------
@@ -101,6 +102,7 @@ function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAtt
   const nav = [
     ['/events/', 'Events'],
     ['/gallery/', 'Gallery'],
+    ['/community/', 'Community'],
   ];
   const cfp = events.filter((e) => !isPast(e) && e.callForPapersUrl)[0];
   return markNewTabLinks(`<!doctype html>
@@ -217,6 +219,19 @@ function gallery(ev) {
     .join('\n')}</div>`;
 }
 
+// Community members: card for lists (bio clipped), full profile on /community/<slug>/.
+const personCard = (p, n = 140) => `<article class="person-card">
+  <img class="speaker-photo" src="${esc(p.photo)}" alt="" loading="lazy" width="104" height="104">
+  <h3><a href="/community/${p.slug}/">${esc(p.name)}</a></h3>
+  <p class="muted">${esc(clip(p.bio[0], n))}</p>
+  <p class="tags">${(p.topics ?? []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</p>
+  <p class="speaker-links">${(p.links ?? []).map((url) => socialLink({ url })).join('')}</p>
+</article>`;
+// Participation stickers: an event with "sticker" + "attendees" (person slugs) issues it to those people.
+const stickersOf = (p) => events.filter((ev) => ev.sticker && ev.attendees?.includes(p.slug));
+const attendeesOf = (ev) => people.filter((p) => ev.attendees?.includes(p.slug));
+const peopleGrid = (n) => `<div class="speaker-grid" data-shuffle>${people.map((p) => personCard(p, n)).join('\n')}</div>`;
+
 const breadcrumbs = (items) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -253,6 +268,10 @@ out.set(
 </section>
 <div class="container">
 ${eventLists()}
+<section class="block">
+  <h2><a href="/community/">Community</a></h2>
+  ${peopleGrid(70)}
+</section>
 </div>`,
   })
 );
@@ -268,6 +287,61 @@ out.set(
     body: `<div class="container page-head"><h1>Events</h1></div>\n<div class="container">${eventLists()}</div>`,
   })
 );
+
+// Community
+out.set(
+  '/community/index.html',
+  page({
+    title: 'Community',
+    path: '/community/',
+    jsonLd: breadcrumbs([['Home', '/'], ['Community', '/community/']]),
+    description: `The people behind ${site.name}: organizers, speakers and community members.`,
+    body: `<div class="container page-head"><h1>Community</h1></div>\n<div class="container"><section class="block">${peopleGrid()}</section></div>`,
+  })
+);
+for (const p of people) {
+  const path = `/community/${p.slug}/`;
+  out.set(
+    `${path}index.html`,
+    page({
+      title: p.name,
+      path,
+      description: p.bio.join(' '),
+      image: p.photo,
+      imageAlt: p.name,
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: p.name,
+          url: abs(path),
+          image: abs(p.photo),
+          description: p.bio.join(' '),
+          knowsAbout: p.topics,
+          sameAs: p.links,
+          memberOf: { '@type': 'Organization', name: site.name, url: site.url },
+        },
+        breadcrumbs([['Home', '/'], ['Community', '/community/'], [p.name, path]]),
+      ],
+      body: `<div class="container">
+<section class="block person">
+  <img class="person-photo" src="${esc(p.photo)}" alt="Portrait of ${esc(p.name)}" width="200" height="200">
+  <div>
+    <p class="eyebrow"><a href="/community/">Community</a></p>
+    <h1>${esc(p.name)}</h1>
+    ${p.bio.map((t) => `<p>${esc(t)}</p>`).join('\n    ')}
+    <p class="tags">${(p.topics ?? []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</p>
+    <p class="speaker-links person-links">${(p.links ?? []).map((url) => socialLink({ url })).join('')}</p>
+  </div>
+</section>
+${stickersOf(p).length ? `<section class="block" id="stickers">
+  <h2>Stickers collection</h2>
+  <ul class="sticker-grid">${stickersOf(p).map((ev) => `<li><a class="sticker" href="/events/${ev.slug}/"><img src="${esc(ev.sticker.src)}" alt="${esc(ev.sticker.alt ?? ev.sticker.name)}" width="160" height="160" loading="lazy"><span class="sticker-name">${esc(ev.sticker.name)}</span><span class="sticker-event muted">${esc(ev.name)}</span></a></li>`).join('')}</ul>
+</section>` : ''}
+</div>`,
+    })
+  );
+}
 
 // Gallery
 const withPhotos = events.filter((e) => e.photos?.length).reverse();
@@ -379,6 +453,17 @@ ${ev.online ? '' : `<section class="block" id="venue">
     <iframe class="map" src="${esc(osmEmbed(loc))}" title="Map of ${esc(loc.name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>`}
+${ev.sticker ? `\n<section class="block" id="sticker">
+  <h2>Participation sticker</h2>
+  <div class="sticker-feature">
+    <img src="${esc(ev.sticker.src)}" alt="${esc(ev.sticker.alt ?? ev.sticker.name)}" width="200" height="200" loading="lazy">
+    <div>
+      <h3>${esc(ev.sticker.name)}</h3>
+      <p>A virtual sticker issued to everyone who attended this meetup.</p>
+      ${attendeesOf(ev).length ? `<p class="muted">Collected by ${attendeesOf(ev).map((p) => `<a href="/community/${p.slug}/">${esc(p.name)}</a>`).join(', ')}.</p>` : ''}
+    </div>
+  </div>
+</section>` : ''}
 ${ev.photos?.length ? `\n<section class="block" id="photos">\n  <h2>Photos</h2>\n  ${gallery(ev)}\n</section>` : ''}
 </div>`,
     })
