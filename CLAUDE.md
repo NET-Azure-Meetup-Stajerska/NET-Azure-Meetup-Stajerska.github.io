@@ -17,12 +17,22 @@ and the generated files are committed.
 Site-wide text/links (tagline, Discord, LinkedIn, URL) live in `data/site.json`.
 
 ## How it works
-- Generated (never hand-edit): `index.html`, `404.html`, `events/**`, `gallery/**`, `sitemap.xml`, `robots.txt`.
+- Generated (never hand-edit): `index.html`, `404.html`, `events/**`, `gallery/**`, `community/**`, `privacy/**`, `sitemap.xml`, `robots.txt`.
+- Keep at the repo root: `google*.html` (Search Console verification; the build does not touch it).
 - Hand-edited: `assets/css/site.css`, `assets/js/*`, `tools/build.mjs`, `data/*`.
 - Speakers and agenda come from Sessionize: baked into the HTML at build time (SEO) and refreshed live in the browser
   by `assets/js/site.js`. Both use the same renderer, `assets/js/sessionize.mjs`.
 - Upcoming/past is decided at build time and re-evaluated in the browser, so events flip to "past" without a rebuild.
 - Always run the build before committing, or the generated HTML goes stale.
+
+## Community members
+Add an object to `data/community.json`: `slug` (ASCII `name-surname`, becomes `/community/<slug>/`), `name`, `photo`, `bio` (array of paragraphs; cards show it clipped),
+`topics[]`, `links[]` (URLs; the network icon is picked from the host). Save the portrait in `images/community/` (square, ~480px JPEG) rather than linking it: the CSP blocks
+images from other sites and some URLs (LinkedIn) expire. Cards are shuffled in the browser (`data-shuffle` + `assets/js/site.js`). Home page shows a Community teaser.
+
+## Participation stickers
+An event can issue a virtual sticker: put the image in `images/stickers/` and add `sticker: {name, src, alt}` and `attendees: [member slugs]` to the event.
+It shows on the event page and in each attendee's "Stickers collection", where a click opens the event page. Attendees must already exist in `community.json`.
 
 ## Partner / external events (e.g. Microsoft Reactor)
 Same file, extra optional fields: `organizer: {name, url, logo}` (`logo: "microsoft"` shows the unaltered Microsoft logo; only for events the company actually organizes) (shows a tag on the card and an "Organized by" line),
