@@ -5,6 +5,7 @@
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { existsSync, createReadStream, statSync } from 'node:fs';
 import { createServer } from 'node:http';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, extname } from 'node:path';
 import { esc, renderSpeakers, renderAgenda, socialLink, BRAND } from '../assets/js/sessionize.mjs';
@@ -95,7 +96,7 @@ async function snapshot(ev) {
 }
 
 // ---------- page shell ----------
-function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAttrs = '', noindex = false }) {
+function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAttrs = '', noindex = false, ogType = 'website' }) {
   const fullTitle = path === '/' ? `${site.name} — .NET, Azure & the community` : `${title} · ${site.name}`;
   const img = abs(image ?? site.ogImage);
   description = clip(description);
@@ -116,7 +117,7 @@ function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAtt
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://cdn.sessionize.com data:; connect-src https://sessionize.com; frame-src https://www.openstreetmap.org; script-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="${abs(path)}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType}">
 <meta property="og:site_name" content="${esc(site.name)}">
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
@@ -306,6 +307,7 @@ for (const p of people) {
     page({
       title: p.name,
       path,
+      ogType: 'profile',
       description: p.bio.join(' '),
       image: p.photo,
       imageAlt: p.name,
@@ -512,11 +514,31 @@ out.set(
 );
 
 // sitemap + robots
+// <lastmod> = date of the last commit that touched the data feeding the page (uncommitted changes count as today).
+// Best effort: without git (or outside a repo) the sitemap simply has no lastmod.
+function lastmod(files) {
+  try {
+    const rel = files.filter((f) => existsSync(join(ROOT, f)));
+    const git = (...a) => execFileSync('git', a, { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    if (git('status', '--porcelain', '--', ...rel)) return new Date().toISOString().slice(0, 10);
+    return git('log', '-1', '--format=%cs', '--', ...rel) || undefined;
+  } catch { return undefined; }
+}
+const sourcesOf = (u) => {
+  const ev = events.find((e) => u === `/events/${e.slug}/`);
+  if (ev) return ['data/events.json', ev.sessionizeId && `data/sessionize/${ev.sessionizeId}.json`].filter(Boolean);
+  if (u.startsWith('/community/')) return ['data/community.json', 'data/events.json'];
+  if (u === '/privacy/') return ['tools/build.mjs'];
+  return ['data/events.json', 'data/community.json', 'data/site.json'];
+};
 const urls = [...out.keys()].filter((k) => k !== '/404.html').map((k) => k.replace(/index\.html$/, ''));
 out.set(
   '/sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-    .map((u) => `  <url><loc>${abs(u)}</loc></url>`)
+    .map((u) => {
+      const lm = lastmod(sourcesOf(u));
+      return `  <url><loc>${abs(u)}</loc>${lm ? `<lastmod>${lm}</lastmod>` : ''}</url>`;
+    })
     .join('\n')}\n</urlset>\n`
 );
 out.set('/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${abs('/sitemap.xml')}\n`);
