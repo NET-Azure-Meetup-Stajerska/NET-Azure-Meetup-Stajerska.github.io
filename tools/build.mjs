@@ -271,7 +271,7 @@ out.set(
 ${eventLists()}
 <section class="block">
   <h2><a href="/community/">Community</a></h2>
-  ${peopleGrid(70)}
+  ${peopleGrid(70, " cols-3")}
 </section>
 </div>`,
   })
