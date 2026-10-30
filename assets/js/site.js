@@ -50,6 +50,21 @@ async function refreshSessionize() {
   }
 }
 
+// Live Discord member count from the public invite endpoint; hidden unless the request succeeds.
+async function discordCount() {
+  const el = document.querySelector('[data-discord-invite]');
+  if (!el) return;
+  try {
+    const r = await fetch(`https://discord.com/api/v10/invites/${el.dataset.discordInvite}?with_counts=true`);
+    const n = (await r.json()).approximate_member_count;
+    if (!Number.isInteger(n)) return;
+    el.querySelector('[data-count]').textContent = n.toLocaleString('en');
+    el.querySelector('.count').hidden = false;
+  } catch (e) {
+    console.warn('Discord count unavailable', e);
+  }
+}
+
 // 4. Minimal lightbox on <dialog> (Esc closes, arrows navigate).
 function lightbox() {
   const links = [...document.querySelectorAll('a[data-lightbox]')];
@@ -136,3 +151,4 @@ themeToggle();
 hideStale();
 lightbox();
 refreshSessionize();
+discordCount();

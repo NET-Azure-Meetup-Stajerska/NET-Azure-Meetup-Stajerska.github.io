@@ -106,6 +106,7 @@ h1, h2 { text-transform: uppercase; letter-spacing: .01em; }
 .hero-rule { height: 6px; width: min(100%, 560px); background: var(--cyan); margin: 20px 0 22px; }
 .lead { font-size: 1.15rem; color: #dbe3fb; max-width: 62ch; }
 .hashtag { font-family: var(--display); font-weight: 700; font-size: 1.3rem; margin: 28px 0 0; color: #fff; }
+.btn .count { margin-left: 4px; padding-left: 12px; border-left: 1px solid currentColor; font-size: .9em; opacity: .8; }
 .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 600; color: var(--cyan); margin: 0 0 12px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
 

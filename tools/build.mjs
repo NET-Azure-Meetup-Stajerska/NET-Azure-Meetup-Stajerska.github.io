@@ -114,7 +114,7 @@ function page({ title, description, path, body, image, imageAlt, jsonLd, bodyAtt
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://cdn.sessionize.com data:; connect-src https://sessionize.com; frame-src https://www.openstreetmap.org; script-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://cdn.sessionize.com data:; connect-src https://sessionize.com https://discord.com; frame-src https://www.openstreetmap.org; script-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="${abs(path)}">
 <meta property="og:type" content="${ogType}">
@@ -260,7 +260,7 @@ out.set(
     <div class="hero-rule"></div>
     <p class="lead">${esc(site.tagline)}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="${esc(site.discord)}" target="_blank" rel="noopener noreferrer">${discordIcon}Join us on Discord</a>
+      <a class="btn btn-primary" href="${esc(site.discord)}" data-discord-invite="${esc(site.discord.split('/').pop())}" target="_blank" rel="noopener noreferrer">${discordIcon}Join us on Discord<span class="count" hidden><span data-count></span> members</span></a>
       <a class="btn btn-light" href="${esc(site.linkedin)}" target="_blank" rel="noopener noreferrer">${linkedinIcon}Follow on LinkedIn</a>
       <a class="btn btn-light" href="/events/">Browse events</a>
     </div>
@@ -487,6 +487,7 @@ out.set(
 <ul>
 <li><strong>Hosting.</strong> The site is hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. As with any web host, GitHub receives technical data such as your IP address when your browser requests a page; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>.</li>
 <li><strong>Speakers and agenda.</strong> On event pages, your browser fetches up-to-date speaker and agenda data (and speaker photos) from <a href="https://sessionize.com/" target="_blank" rel="noopener noreferrer">Sessionize</a>, so Sessionize sees your IP address, as with any embedded content.</li>
+<li><strong>Community size.</strong> On the home page, your browser asks <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>'s public invite endpoint for the number of members of our server, so Discord sees your IP address. No cookies are involved and nothing is sent about you; if the request fails, the number is simply not shown.</li>
 <li><strong>Maps.</strong> Event pages with a venue embed a map from <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>. It sets no cookies, but loading it sends your IP address and browser details to OpenStreetMap's servers; see the <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OpenStreetMap Foundation privacy policy</a>. The address link opens Google Maps only if you click it.</li>
 <li><strong>Theme choice.</strong> If you pick light or dark with the theme button, your choice is saved in your browser's local storage so it is remembered. It never leaves your device.</li>
 <li><strong>Fonts, icons and styles</strong> are served from this site; nothing is loaded from font or script CDNs.</li>
