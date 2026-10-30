@@ -73,7 +73,7 @@
     "startsAt": "2026-10-15T18:30:00+02:00",
     "endsAt": "2026-10-15T20:30:00+02:00",
     "sticker": { "name": "Machines Writing Things", "src": "/images/stickers/october-2026.png", "alt": "Purple .NET bot typing on a keyboard, surrounded by floating screens showing C# Source Generators and Azure AI Foundry, with the words Machines Writing Things" },
-    "attendees": ["amadej-glasencnik", "ratko-cosic", "nicola-paro"],
+    "attendees": ["amadej-glasencnik", "ratko-cosic", "nicola-paro", "tomaz-koritnik"],
     "description": "The third official meetup of our community, hosted at ZRS Bistra Ptuj. Whether you're a seasoned expert or just starting your journey, you're welcome here!",
     "callForPapersUrl": "https://sessionize.com/net-azure-meetup-stajerska-october-2026",
     "ticketsUrl": "https://www.eventbrite.it/e/net-azure-meetup-stajerska-october-2026-tickets-2000287445596?aff=oddtdtcreator",

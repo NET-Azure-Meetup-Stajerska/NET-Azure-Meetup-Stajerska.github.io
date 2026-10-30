@@ -78,5 +78,25 @@
       "https://mojevabilo.si",
       "https://organize-it.si"
     ]
+  },
+  {
+    "slug": "tomaz-koritnik",
+    "name": "Tomaž Koritnik",
+    "photo": "/images/community/tomaz-koritnik.svg",
+    "bio": [
+      "I’m a curious, analytical, and solution-oriented thinker who enjoys turning complex challenges into elegant, practical solutions. I believe great software should be simple, understandable, maintainable, and built to evolve.",
+      "My approach combines technical excellence, creativity, and pragmatic software architecture. Software engineering is a continuous journey of learning, experimenting, and building things that make a difference."
+    ],
+    "topics": [
+      ".NET",
+      "Azure",
+      "DevOps",
+      "AI",
+      "Software architecture and managing the complexity"
+    ],
+    "links": [
+      "https://www.linkedin.com/in/tomaz-koritnik-a0895b18/",
+      "https://www.facebook.com/tomaz.koritnik.3"
+    ]
   }
 ]
