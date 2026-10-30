@@ -153,6 +153,9 @@ h1, h2 { text-transform: uppercase; letter-spacing: .01em; }
 
 /* Speakers */
 .speaker-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.speaker-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .speaker-grid.cols-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .speaker-grid.cols-3 { grid-template-columns: 1fr; } }
 .speaker-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-align: center; box-shadow: var(--shadow); }
 .speaker-card h3 { font-size: 1.1rem; margin: 12px 0 4px; }
 .speaker-card p { margin: 0 0 8px; }

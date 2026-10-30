@@ -231,7 +231,7 @@ const personCard = (p, n = 140) => `<article class="person-card">
 // Participation stickers: an event with "sticker" + "attendees" (person slugs) issues it to those people.
 const stickersOf = (p) => events.filter((ev) => ev.sticker && ev.attendees?.includes(p.slug));
 const attendeesOf = (ev) => people.filter((p) => ev.attendees?.includes(p.slug));
-const peopleGrid = (n) => `<div class="speaker-grid" data-shuffle>${people.map((p) => personCard(p, n)).join('\n')}</div>`;
+const peopleGrid = (n, cls = "") => `<div class="speaker-grid${cls}" data-shuffle>${people.map((p) => personCard(p, n)).join('\n')}</div>`;
 
 const breadcrumbs = (items) => ({
   '@context': 'https://schema.org',
@@ -297,7 +297,7 @@ out.set(
     path: '/community/',
     jsonLd: breadcrumbs([['Home', '/'], ['Community', '/community/']]),
     description: `The people behind ${site.name}: organizers, speakers and community members.`,
-    body: `<div class="container page-head"><h1>Community</h1></div>\n<div class="container"><section class="block">${peopleGrid()}</section></div>`,
+    body: `<div class="container page-head"><h1>Community</h1></div>\n<div class="container"><section class="block">${peopleGrid(undefined, " cols-3")}</section></div>`,
   })
 );
 for (const p of people) {
