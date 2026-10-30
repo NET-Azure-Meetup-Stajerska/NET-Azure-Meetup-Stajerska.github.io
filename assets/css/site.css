@@ -310,7 +310,7 @@ a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid
 .person-card h3 a { color: inherit; text-decoration: none; }
 .person-card h3 a:hover { color: var(--primary); }
 .person-card p { margin: 0 0 8px; }
-.person-card .speaker-photo { display: block; }
+.person-card .speaker-photo { display: block; width: 150px; height: 150px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
 .person-card .tags { justify-content: center; }
 .tags .tag { margin-left: 0; }

@@ -222,7 +222,7 @@ function gallery(ev) {
 
 // Community members: card for lists (bio clipped), full profile on /community/<slug>/.
 const personCard = (p, n = 140) => `<article class="person-card">
-  <img class="speaker-photo" src="${esc(p.photo)}" alt="" loading="lazy" width="104" height="104">
+  <img class="speaker-photo" src="${esc(p.photo)}" alt="" loading="lazy" width="150" height="150">
   <h3><a href="/community/${p.slug}/">${esc(p.name)}</a></h3>
   <p class="muted">${esc(clip(p.bio[0], n))}</p>
   <p class="tags">${(p.topics ?? []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</p>
